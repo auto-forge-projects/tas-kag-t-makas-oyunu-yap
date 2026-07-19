@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 33,
+  "revision": 36,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -9,30 +9,12 @@
   "status": "running",
   "active_agents": [
     {
-      "agent": "developer",
-      "model": "sonnet",
-      "phase": "6",
-      "task": "UI/UX (docs/06-uiux/)",
-      "started_at": "2026-07-19T10:37:00Z",
-      "last_update": "2026-07-19T10:37:00Z",
-      "via": "inline"
-    },
-    {
       "agent": "security-reviewer",
       "model": "opus",
       "phase": "7",
       "task": "Guvenlik (docs/07-security.md)",
       "started_at": "2026-07-19T10:37:00Z",
       "last_update": "2026-07-19T10:37:00Z"
-    },
-    {
-      "agent": "business-analyst",
-      "model": "sonnet",
-      "phase": "8",
-      "task": "Planlama (docs/08-plan.md)",
-      "started_at": "2026-07-19T10:37:00Z",
-      "last_update": "2026-07-19T10:37:00Z",
-      "via": "inline"
     }
   ],
   "phases": {
@@ -114,8 +96,17 @@
     },
     "8": {
       "mode": "AUTOPILOT",
-      "status": "running",
-      "started_at": "2026-07-19T10:37:00Z"
+      "status": "done",
+      "started_at": "2026-07-19T10:37:00Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/08-plan.md"
+      ],
+      "decisions": [
+        "DL-08-001"
+      ],
+      "completed_at": "2026-07-19T10:48:00Z",
+      "note": "7 task, tek milestone, TDD sirali backlog. Kapi gecti (structural)."
     },
     "1-2": {
       "mode": "CHECKPOINT",
@@ -226,12 +217,18 @@
       "event": "phase_completed",
       "phase": "6",
       "detail": "docs/06-uiux/06-uiux.md uretildi (developer, inline); kapi gecti (structural)"
+    },
+    {
+      "at": "2026-07-19T10:48:00Z",
+      "event": "phase_completed",
+      "phase": "8",
+      "detail": "docs/08-plan.md uretildi (business-analyst, inline); kapi gecti (structural)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T10:04:14.677Z",
+  "updated_at": "2026-07-19T10:05:19.111Z",
   "default_mode": "AUTOPILOT"
 }
