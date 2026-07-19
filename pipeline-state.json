@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 46,
+  "revision": 47,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "10",
+  "current_phase": "12",
   "status": "running",
   "active_agents": [
     {
@@ -15,6 +15,15 @@
       "task": "Blind code review (src/+tests diff, docs/03,05,07)",
       "started_at": "2026-07-19T12:08:54Z",
       "last_update": "2026-07-19T12:08:54Z"
+    },
+    {
+      "agent": "devops-engineer",
+      "model": "sonnet",
+      "phase": "12",
+      "task": "Dockerfile + .dockerignore + CI/deploy workflow doğrulama",
+      "started_at": "2026-07-19T12:13:44Z",
+      "last_update": "2026-07-19T12:13:44Z",
+      "via": "inline"
     }
   ],
   "phases": {
@@ -206,6 +215,33 @@
         "DL-11-001"
       ]
     },
+    "12": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T12:13:44Z",
+      "tasks": [
+        {
+          "title": "Dockerfile + .dockerignore yaz (TASK-007)",
+          "status": "in_progress"
+        },
+        {
+          "title": "docker build + boyut ≤150MB doğrula",
+          "status": "pending"
+        },
+        {
+          "title": "container çalıştır + /health doğrula",
+          "status": "pending"
+        },
+        {
+          "title": "state.product + DL-12-001",
+          "status": "pending"
+        },
+        {
+          "title": "commit",
+          "status": "pending"
+        }
+      ]
+    },
     "1-2": {
       "mode": "CHECKPOINT",
       "status": "done",
@@ -345,6 +381,6 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:11:46Z",
+  "updated_at": "2026-07-19T12:13:44Z",
   "default_mode": "AUTOPILOT"
 }

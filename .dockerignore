@@ -1,0 +1,12 @@
+.git
+node_modules
+tests
+docs
+decisions
+deploy
+.github
+*.md
+pipeline-state.json
+.state.lock
+.dockerignore
+Dockerfile
