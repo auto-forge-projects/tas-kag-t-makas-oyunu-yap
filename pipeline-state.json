@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 50,
+  "revision": 52,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "12",
+  "current_phase": "14",
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -243,6 +243,60 @@
         "DL-12-001"
       ]
     },
+    "13": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T12:20:45Z",
+      "tasks": [
+        {
+          "title": "13-release-notes.md yaz (rollback plani)",
+          "status": "done"
+        },
+        {
+          "title": "DL-13-001 + kapi",
+          "status": "done"
+        },
+        {
+          "title": "commit",
+          "status": "in_progress"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:22:24Z",
+      "artifacts": [
+        "docs/13-release-notes.md"
+      ],
+      "decisions": [
+        "DL-13-001"
+      ]
+    },
+    "14": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T12:20:45Z",
+      "tasks": [
+        {
+          "title": "monitoring tanimlari yaz (log/metrik/alert)",
+          "status": "done"
+        },
+        {
+          "title": "DL-14-001 + kapi",
+          "status": "done"
+        },
+        {
+          "title": "commit",
+          "status": "in_progress"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:22:24Z",
+      "artifacts": [
+        "docs/14-monitoring.md"
+      ],
+      "decisions": [
+        "DL-14-001"
+      ]
+    },
     "1-2": {
       "mode": "CHECKPOINT",
       "status": "done",
@@ -388,7 +442,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:20:17Z",
+  "updated_at": "2026-07-19T12:22:24Z",
   "default_mode": "AUTOPILOT",
   "product": {
     "name": "tas-kag-t-makas-oyunu-yap",
