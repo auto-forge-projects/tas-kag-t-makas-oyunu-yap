@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 8,
+  "revision": 12,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": 0,
-  "status": "running",
+  "current_phase": "1-2",
+  "status": "awaiting_approval",
   "active_agents": [],
   "phases": {
     "0": {
@@ -23,6 +23,20 @@
       "gate_passed": true,
       "completed_at": "2026-07-19T09:47:00Z",
       "note": "Faz 0 (Fikir/Intake) üretildi — onaylı brief üzerinden; problem/başarı kriterleri birebir aktarıldı. Kapı geçti (structural)."
+    },
+    "1-2": {
+      "mode": "CHECKPOINT",
+      "status": "awaiting_approval",
+      "started_at": "2026-07-19T09:50:00Z",
+      "artifacts": [
+        "docs/01-02-value-feasibility.md"
+      ],
+      "decisions": [
+        "DL-01-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T09:55:00Z",
+      "note": "Faz 1+2 (Değer & Fizibilite) üretildi — GO kararı, 4 KPI, kapı geçti (structural); kullanıcı onayı bekleniyor."
     }
   },
   "feedback_loops": [],
@@ -51,12 +65,22 @@
       "event": "phase_completed",
       "phase": 0,
       "detail": "docs/00-idea.md üretildi (business-analyst, inline); kapı geçti (structural)"
+    },
+    {
+      "event": "phase_started",
+      "phase": "1-2",
+      "detail": "Faz 1+2 (Değer & Fizibilite) üretimi başladı — girdi: docs/00-idea.md"
+    },
+    {
+      "event": "phase_completed",
+      "phase": "1-2",
+      "detail": "docs/01-02-value-feasibility.md üretildi (business-analyst, inline); GO kararı; kapı geçti (structural); kullanıcı onayı bekleniyor"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T09:41:00.604Z",
+  "updated_at": "2026-07-19T09:42:07.207Z",
   "default_mode": "AUTOPILOT"
 }
