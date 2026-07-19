@@ -1,22 +1,13 @@
 {
   "schema_version": 2,
-  "revision": 36,
+  "revision": 38,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "6",
+  "current_phase": "9",
   "status": "running",
-  "active_agents": [
-    {
-      "agent": "security-reviewer",
-      "model": "opus",
-      "phase": "7",
-      "task": "Guvenlik (docs/07-security.md)",
-      "started_at": "2026-07-19T10:37:00Z",
-      "last_update": "2026-07-19T10:37:00Z"
-    }
-  ],
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "CHECKPOINT",
@@ -91,8 +82,17 @@
     },
     "7": {
       "mode": "AUTOPILOT",
-      "status": "running",
-      "started_at": "2026-07-19T10:37:00Z"
+      "status": "done",
+      "started_at": "2026-07-19T10:37:00Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/07-security.md"
+      ],
+      "decisions": [
+        "DL-07-001"
+      ],
+      "completed_at": "2026-07-19T10:52:00Z",
+      "note": "security-reviewer (opus) devri: OWASP 10/10 + STRIDE + SEC-1..9 Faz 9ya devredildi. Kritik risk kabulu yok. Kapi gecti (structural)."
     },
     "8": {
       "mode": "AUTOPILOT",
@@ -223,12 +223,18 @@
       "event": "phase_completed",
       "phase": "8",
       "detail": "docs/08-plan.md uretildi (business-analyst, inline); kapi gecti (structural)"
+    },
+    {
+      "at": "2026-07-19T10:52:00Z",
+      "event": "phase_completed",
+      "phase": "7",
+      "detail": "docs/07-security.md uretildi (security-reviewer subagent); kapi gecti (structural); Faz 6/7/8 uclu paralel tamamlandi -> Faz 9 acilabilir"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T10:05:19.111Z",
+  "updated_at": "2026-07-19T10:05:36.498Z",
   "default_mode": "AUTOPILOT"
 }
