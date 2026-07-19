@@ -1,13 +1,40 @@
 {
   "schema_version": 2,
-  "revision": 29,
+  "revision": 33,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "5",
+  "current_phase": "6",
   "status": "running",
-  "active_agents": [],
+  "active_agents": [
+    {
+      "agent": "developer",
+      "model": "sonnet",
+      "phase": "6",
+      "task": "UI/UX (docs/06-uiux/)",
+      "started_at": "2026-07-19T10:37:00Z",
+      "last_update": "2026-07-19T10:37:00Z",
+      "via": "inline"
+    },
+    {
+      "agent": "security-reviewer",
+      "model": "opus",
+      "phase": "7",
+      "task": "Guvenlik (docs/07-security.md)",
+      "started_at": "2026-07-19T10:37:00Z",
+      "last_update": "2026-07-19T10:37:00Z"
+    },
+    {
+      "agent": "business-analyst",
+      "model": "sonnet",
+      "phase": "8",
+      "task": "Planlama (docs/08-plan.md)",
+      "started_at": "2026-07-19T10:37:00Z",
+      "last_update": "2026-07-19T10:37:00Z",
+      "via": "inline"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "CHECKPOINT",
@@ -65,6 +92,30 @@
       ],
       "completed_at": "2026-07-19T10:35:00Z",
       "note": "architect (opus) devri: Mermaid mimari + NFR eslemesi. Kapi gecti (structural)."
+    },
+    "6": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T10:37:00Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/06-uiux/06-uiux.md"
+      ],
+      "decisions": [
+        "DL-06-001"
+      ],
+      "completed_at": "2026-07-19T10:42:00Z",
+      "note": "Emoji-tabanli minimal tek ekran UI. Kapi gecti (structural)."
+    },
+    "7": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T10:37:00Z"
+    },
+    "8": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T10:37:00Z"
     },
     "1-2": {
       "mode": "CHECKPOINT",
@@ -164,12 +215,23 @@
       "event": "phase_completed",
       "phase": "5",
       "detail": "docs/05-architecture.md uretildi (architect subagent); kapi gecti (structural); AUTOPILOT -> devam. Faz 6/7/8 paralel acilabilir (deps: 5)."
+    },
+    {
+      "at": "2026-07-19T10:37:00Z",
+      "event": "phase_started",
+      "detail": "Faz 6/7/8 paralel acildi (deps: 5 tamamlandi). Faz 7 security-reviewer subagenta devredildi (zorunlu); Faz 6/8 inline."
+    },
+    {
+      "at": "2026-07-19T10:42:00Z",
+      "event": "phase_completed",
+      "phase": "6",
+      "detail": "docs/06-uiux/06-uiux.md uretildi (developer, inline); kapi gecti (structural)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T10:02:19.164Z",
+  "updated_at": "2026-07-19T10:04:14.677Z",
   "default_mode": "AUTOPILOT"
 }
