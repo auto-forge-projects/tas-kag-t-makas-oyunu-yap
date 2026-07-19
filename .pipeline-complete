@@ -1,0 +1,2 @@
+AutoForge pipeline tamamlandı (16/16 faz done) — 2026-07-19T12:26:10Z.
+Bu işaretten sonra .githooks/commit-msg artık [skip ci] eklemez; commit'ler/push'lar CI'ı normal tetikler.
