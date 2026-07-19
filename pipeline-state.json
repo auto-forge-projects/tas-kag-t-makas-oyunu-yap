@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 47,
+  "revision": 48,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -9,18 +9,10 @@
   "status": "running",
   "active_agents": [
     {
-      "agent": "code-reviewer",
-      "model": "opus",
-      "phase": "10",
-      "task": "Blind code review (src/+tests diff, docs/03,05,07)",
-      "started_at": "2026-07-19T12:08:54Z",
-      "last_update": "2026-07-19T12:08:54Z"
-    },
-    {
       "agent": "devops-engineer",
       "model": "sonnet",
       "phase": "12",
-      "task": "Dockerfile + .dockerignore + CI/deploy workflow doğrulama",
+      "task": "Dockerfile + .dockerignore + CI/deploy workflow dogrulama",
       "started_at": "2026-07-19T12:13:44Z",
       "last_update": "2026-07-19T12:13:44Z",
       "via": "inline"
@@ -157,25 +149,33 @@
     },
     "10": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T12:08:54Z",
       "tasks": [
         {
           "title": "Blind review (src/+tests, docs/03,05,07)",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "Bulgu tablosu + severity + FR izlenebilirlik",
-          "status": "pending"
+          "status": "done"
         },
         {
           "title": "DL-10-001 yaz",
-          "status": "pending"
+          "status": "done"
         },
         {
           "title": "docs/10-review/PR-1.md commit",
-          "status": "pending"
+          "status": "done"
         }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:16:24Z",
+      "artifacts": [
+        "docs/10-review/PR-1.md"
+      ],
+      "decisions": [
+        "DL-10-001"
       ]
     },
     "11": {
@@ -258,7 +258,13 @@
     }
   },
   "feedback_loops": [],
-  "pending_human_review": [],
+  "pending_human_review": [
+    {
+      "decision": "DL-10-001",
+      "konu": "FR-4 sayac dogrulugu (tally/resultText) app.js icinde otomatik test edilmiyor - Major, ertelendi",
+      "aksiyon": "Onayla (borc kabul) veya Faz 9 hizli takibe al: tally/resultText saf fonksiyonlarini game.js dosyasina cikar + birim test ekle"
+    }
+  ],
   "history": [
     {
       "event": "project_materialized",
@@ -381,6 +387,6 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:13:44Z",
+  "updated_at": "2026-07-19T12:16:24Z",
   "default_mode": "AUTOPILOT"
 }
