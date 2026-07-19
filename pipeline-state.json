@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 25,
+  "revision": 29,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "4",
+  "current_phase": "5",
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -51,6 +51,20 @@
       ],
       "completed_at": "2026-07-19T10:25:00Z",
       "note": "architect (opus) devri: Express+vanilla JS istemci-taraflı mantık kararı. Kapı gecti (structural)."
+    },
+    "5": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T10:27:00Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/05-architecture.md"
+      ],
+      "decisions": [
+        "DL-05-001"
+      ],
+      "completed_at": "2026-07-19T10:35:00Z",
+      "note": "architect (opus) devri: Mermaid mimari + NFR eslemesi. Kapi gecti (structural)."
     },
     "1-2": {
       "mode": "CHECKPOINT",
@@ -138,12 +152,24 @@
       "event": "phase_completed",
       "phase": "4",
       "detail": "docs/04-solution-analysis.md uretildi (architect subagent); kapi gecti (structural); AUTOPILOT -> devam"
+    },
+    {
+      "at": "2026-07-19T10:27:00Z",
+      "event": "phase_started",
+      "phase": "5",
+      "detail": "Faz 5 (Mimari Tasarim) architect subagenta devredildi - girdi: docs/03-requirements.md, docs/04-solution-analysis.md"
+    },
+    {
+      "at": "2026-07-19T10:35:00Z",
+      "event": "phase_completed",
+      "phase": "5",
+      "detail": "docs/05-architecture.md uretildi (architect subagent); kapi gecti (structural); AUTOPILOT -> devam. Faz 6/7/8 paralel acilabilir (deps: 5)."
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T09:58:38.562Z",
+  "updated_at": "2026-07-19T10:02:19.164Z",
   "default_mode": "AUTOPILOT"
 }
