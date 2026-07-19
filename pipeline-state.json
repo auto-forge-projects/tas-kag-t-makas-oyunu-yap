@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 55,
+  "revision": 57,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -496,7 +496,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:26:10Z",
+  "updated_at": "2026-07-19T12:28:00Z",
   "default_mode": "AUTOPILOT",
   "product": {
     "name": "tas-kag-t-makas-oyunu-yap",
@@ -523,5 +523,13 @@
         "path": "docs/11-test/results.md"
       }
     ]
+  },
+  "deploy": {
+    "status": "deployed",
+    "url": "https://tas-kag-t-makas-oyunu-yap.apps.sametemek.com",
+    "server": "main",
+    "triggered_at": "2026-07-19T12:26:48Z",
+    "run": "deploy-image.yml (push-triggered, run 29686995990)",
+    "deployed_at": "2026-07-19T12:28:00Z"
   }
 }
