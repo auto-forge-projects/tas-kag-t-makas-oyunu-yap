@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 21,
+  "revision": 25,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "3",
-  "status": "done",
+  "current_phase": "4",
+  "status": "running",
   "active_agents": [],
   "phases": {
     "0": {
@@ -37,6 +37,20 @@
       ],
       "completed_at": "2026-07-19T10:10:00Z",
       "note": "6 FR + 8 NFR tanımlandı; açık sorular (web, stateless skor, tema) varsayımla kapatıldı. Kapı geçti (structural)."
+    },
+    "4": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T10:12:00Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/04-solution-analysis.md"
+      ],
+      "decisions": [
+        "DL-04-001"
+      ],
+      "completed_at": "2026-07-19T10:25:00Z",
+      "note": "architect (opus) devri: Express+vanilla JS istemci-taraflı mantık kararı. Kapı gecti (structural)."
     },
     "1-2": {
       "mode": "CHECKPOINT",
@@ -112,12 +126,24 @@
       "event": "phase_completed",
       "phase": "3",
       "detail": "docs/03-requirements.md üretildi (business-analyst, inline); kapı geçti (structural); AUTOPILOT → devam"
+    },
+    {
+      "at": "2026-07-19T10:12:00Z",
+      "event": "phase_started",
+      "phase": "4",
+      "detail": "Faz 4 (Cozum Analizi) architect subagenta devredildi - girdi: docs/03-requirements.md (model farki: Opus > oturum Sonnet)"
+    },
+    {
+      "at": "2026-07-19T10:25:00Z",
+      "event": "phase_completed",
+      "phase": "4",
+      "detail": "docs/04-solution-analysis.md uretildi (architect subagent); kapi gecti (structural); AUTOPILOT -> devam"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T09:52:22.622Z",
+  "updated_at": "2026-07-19T09:58:38.562Z",
   "default_mode": "AUTOPILOT"
 }
