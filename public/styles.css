@@ -1,0 +1,113 @@
+/* tas-kag-t-makas-oyunu-yap — saf CSS, kütüphanesiz. Kontrast >= 4.5:1 (WCAG 2.1 AA, NFR-5). */
+
+:root {
+  --bg: #0f1420;
+  --fg: #e6ebf5;
+  --accent: #7aa2ff;
+  --panel-bg: #1d2639;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 16px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.card {
+  text-align: center;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.noscript-warning {
+  background: #4a1d1d;
+  color: #ffd7d7;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 16px;
+}
+
+.moves {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 14px 20px;
+  min-width: 96px;
+  min-height: 44px; /* NFR-6: dokunma hedefi ≥44px */
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  background: var(--panel-bg);
+  color: var(--fg);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
+
+button:hover:not(:disabled) {
+  border-color: #9db8ff;
+}
+
+button:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.round {
+  min-height: 28px;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.result {
+  min-height: 24px;
+  font-size: 18px;
+  margin: 8px 0 16px;
+}
+
+.score {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.note {
+  color: #aab4c9;
+  font-size: 12px;
+}
+
+@media (max-width: 360px) {
+  .moves {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

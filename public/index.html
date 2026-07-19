@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>✊✋✌️ Taş Kağıt Makas</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <noscript>
+    <p class="noscript-warning">
+      Bu oyun JavaScript gerektirir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.
+    </p>
+  </noscript>
+
+  <main class="card">
+    <h1>✊✋✌️ Taş Kağıt Makas</h1>
+
+    <div class="moves" role="group" aria-label="Hamle seç">
+      <button type="button" data-move="tas">✊ Taş</button>
+      <button type="button" data-move="kagit">✋ Kağıt</button>
+      <button type="button" data-move="makas">✌️ Makas</button>
+    </div>
+
+    <div id="round" class="round"></div>
+
+    <p id="result" class="result" aria-live="polite"></p>
+
+    <div id="score" class="score">Kazanma: 0 · Kaybetme: 0 · Berabere: 0</div>
+
+    <small class="note">Skor yalnız bu oturumda tutulur, yenilemede sıfırlanır.</small>
+  </main>
+
+  <script src="/game.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
