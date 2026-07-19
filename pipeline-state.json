@@ -1,23 +1,13 @@
 {
   "schema_version": 2,
-  "revision": 48,
+  "revision": 50,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
   "current_phase": "12",
   "status": "running",
-  "active_agents": [
-    {
-      "agent": "devops-engineer",
-      "model": "sonnet",
-      "phase": "12",
-      "task": "Dockerfile + .dockerignore + CI/deploy workflow dogrulama",
-      "started_at": "2026-07-19T12:13:44Z",
-      "last_update": "2026-07-19T12:13:44Z",
-      "via": "inline"
-    }
-  ],
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "CHECKPOINT",
@@ -217,29 +207,40 @@
     },
     "12": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T12:13:44Z",
       "tasks": [
         {
           "title": "Dockerfile + .dockerignore yaz (TASK-007)",
-          "status": "in_progress"
+          "status": "done"
         },
         {
-          "title": "docker build + boyut ≤150MB doğrula",
-          "status": "pending"
+          "title": "docker build + boyut <=150MB dogrula",
+          "status": "done"
         },
         {
-          "title": "container çalıştır + /health doğrula",
-          "status": "pending"
+          "title": "container calistir + /health dogrula",
+          "status": "done"
         },
         {
           "title": "state.product + DL-12-001",
-          "status": "pending"
+          "status": "done"
         },
         {
           "title": "commit",
-          "status": "pending"
+          "status": "in_progress"
         }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:20:17Z",
+      "artifacts": [
+        "Dockerfile",
+        ".dockerignore",
+        ".github/workflows/ci.yml",
+        ".github/workflows/deploy-image.yml"
+      ],
+      "decisions": [
+        "DL-12-001"
       ]
     },
     "1-2": {
@@ -387,6 +388,32 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:16:24Z",
-  "default_mode": "AUTOPILOT"
+  "updated_at": "2026-07-19T12:20:17Z",
+  "default_mode": "AUTOPILOT",
+  "product": {
+    "name": "tas-kag-t-makas-oyunu-yap",
+    "version": "0.1.0",
+    "type": "web",
+    "docker_image": "tas-kag-t-makas-oyunu-yap:0.1.0",
+    "auto_run": false,
+    "commands": {
+      "build": "docker build -t tas-kag-t-makas-oyunu-yap:0.1.0 .",
+      "test": "npm test",
+      "run": "docker run -p 3000:3000 tas-kag-t-makas-oyunu-yap:0.1.0"
+    },
+    "links": [
+      {
+        "label": "README",
+        "path": "README.md"
+      },
+      {
+        "label": "Mimari",
+        "path": "docs/05-architecture.md"
+      },
+      {
+        "label": "Test Sonuclari",
+        "path": "docs/11-test/results.md"
+      }
+    ]
+  }
 }
