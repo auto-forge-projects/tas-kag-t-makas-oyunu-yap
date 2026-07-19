@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "revision": 52,
+  "revision": 54,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": "14",
+  "current_phase": "16",
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -297,6 +297,33 @@
         "DL-14-001"
       ]
     },
+    "15": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T12:22:59Z",
+      "tasks": [
+        {
+          "title": "15-maintenance.md yaz (TD listesi + oncelik)",
+          "status": "done"
+        },
+        {
+          "title": "DL-15-001 + kapi",
+          "status": "done"
+        },
+        {
+          "title": "commit",
+          "status": "in_progress"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:23:56Z",
+      "artifacts": [
+        "docs/15-maintenance.md"
+      ],
+      "decisions": [
+        "DL-15-001"
+      ]
+    },
     "1-2": {
       "mode": "CHECKPOINT",
       "status": "done",
@@ -442,7 +469,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:22:24Z",
+  "updated_at": "2026-07-19T12:23:56Z",
   "default_mode": "AUTOPILOT",
   "product": {
     "name": "tas-kag-t-makas-oyunu-yap",
