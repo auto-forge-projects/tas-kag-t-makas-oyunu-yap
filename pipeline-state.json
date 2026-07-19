@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 38,
+  "revision": 43,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -107,6 +107,35 @@
       ],
       "completed_at": "2026-07-19T10:48:00Z",
       "note": "7 task, tek milestone, TDD sirali backlog. Kapi gecti (structural)."
+    },
+    "9": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T10:55:00Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-19T12:04:31Z",
+      "tasks": [
+        {
+          "title": "Test yaz (game+health)",
+          "status": "done"
+        },
+        {
+          "title": "Implement (server/game/UI)",
+          "status": "done"
+        },
+        {
+          "title": "npm test yeşil (10/10)",
+          "status": "done"
+        },
+        {
+          "title": "DL-09-001 yaz",
+          "status": "done"
+        },
+        {
+          "title": "commit (test+feat)",
+          "status": "done"
+        }
+      ]
     },
     "1-2": {
       "mode": "CHECKPOINT",
@@ -229,12 +258,24 @@
       "event": "phase_completed",
       "phase": "7",
       "detail": "docs/07-security.md uretildi (security-reviewer subagent); kapi gecti (structural); Faz 6/7/8 uclu paralel tamamlandi -> Faz 9 acilabilir"
+    },
+    {
+      "at": "2026-07-19T10:55:00Z",
+      "event": "phase_started",
+      "phase": "9",
+      "detail": "Faz 9 (Development) basladi - girdi: docs/03,05,07,08. TDD sirasi: game.js -> server.js -> UI"
+    },
+    {
+      "at": "2026-07-19T12:04:31Z",
+      "event": "recovered",
+      "phase": "9",
+      "detail": "Faz 9 kesinti sonrası kurtarıldı: iş listesinden devam (done adımlar diskte doğrulandı, yalnız commit kaldı) → test+feat commit + kapanış. AF-036/038"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T10:05:36.498Z",
+  "updated_at": "2026-07-19T12:04:32.025Z",
   "default_mode": "AUTOPILOT"
 }
