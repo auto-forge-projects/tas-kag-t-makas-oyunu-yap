@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 59,
+  "revision": 60,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -489,13 +489,17 @@
       "at": "2026-07-19T12:37:59.218Z",
       "event": "decision_approve",
       "detail": "DL-10-001"
+    },
+    {
+      "event": "recovered",
+      "detail": "pipeline-resume: doctor temiz (bulgu yok, pipeline zaten Faz16da tamamlanmış+deploy edilmiş); dashboard DL-10-001 onayının commit-siz kalan pipeline-state.json/DL değişikliği catch-up commit ile pushlandı (b63656d)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:37:59.249Z",
+  "updated_at": "2026-07-19T13:01:58.482Z",
   "default_mode": "AUTOPILOT",
   "product": {
     "name": "tas-kag-t-makas-oyunu-yap",
