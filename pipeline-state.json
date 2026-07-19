@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 57,
+  "revision": 59,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
@@ -367,13 +367,7 @@
     }
   },
   "feedback_loops": [],
-  "pending_human_review": [
-    {
-      "decision": "DL-10-001",
-      "konu": "FR-4 sayac dogrulugu (tally/resultText) app.js icinde otomatik test edilmiyor - Major, ertelendi",
-      "aksiyon": "Onayla (borc kabul) veya Faz 9 hizli takibe al: tally/resultText saf fonksiyonlarini game.js dosyasina cikar + birim test ekle"
-    }
-  ],
+  "pending_human_review": [],
   "history": [
     {
       "event": "project_materialized",
@@ -490,13 +484,18 @@
       "event": "recovered",
       "phase": "9",
       "detail": "Faz 9 kesinti sonrası kurtarıldı: iş listesinden devam (done adımlar diskte doğrulandı, yalnız commit kaldı) → test+feat commit + kapanış. AF-036/038"
+    },
+    {
+      "at": "2026-07-19T12:37:59.218Z",
+      "event": "decision_approve",
+      "detail": "DL-10-001"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T12:28:00Z",
+  "updated_at": "2026-07-19T12:37:59.249Z",
   "default_mode": "AUTOPILOT",
   "product": {
     "name": "tas-kag-t-makas-oyunu-yap",
