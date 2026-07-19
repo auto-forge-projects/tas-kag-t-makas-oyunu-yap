@@ -1,20 +1,62 @@
 {
   "schema_version": 2,
-  "revision": 0,
+  "revision": 8,
   "project": "tas-kag-t-makas-oyunu-yap",
   "workspace": "workspace/tas-kag-t-makas-oyunu-yap",
   "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": null,
-  "status": "pending",
+  "current_phase": 0,
+  "status": "running",
   "active_agents": [],
-  "phases": {},
+  "phases": {
+    "0": {
+      "mode": "CHECKPOINT",
+      "status": "done",
+      "started_at": "2026-07-19T09:45:00Z",
+      "artifacts": [
+        "docs/00-refined-brief.md",
+        "docs/00-idea.md"
+      ],
+      "decisions": [
+        "DL-00-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T09:47:00Z",
+      "note": "Faz 0 (Fikir/Intake) üretildi — onaylı brief üzerinden; problem/başarı kriterleri birebir aktarıldı. Kapı geçti (structural)."
+    }
+  },
   "feedback_loops": [],
   "pending_human_review": [],
-  "history": [],
+  "history": [
+    {
+      "event": "project_materialized",
+      "detail": "Taslak gerçek projeye dönüştürüldü: repo auto-forge-projects/tas-kag-t-makas-oyunu-yap, workspace/tas-kag-t-makas-oyunu-yap"
+    },
+    {
+      "event": "phase_approved",
+      "phase": "0b",
+      "detail": "Rafine brief onaylandı (dashboard, 2026-07-19)"
+    },
+    {
+      "event": "phase_started",
+      "phase": 0,
+      "detail": "Faz 0 (Fikir/Intake) üretimi başladı — girdi: onaylı docs/00-refined-brief.md"
+    },
+    {
+      "at": "2026-07-19T09:40:33.904Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
+    },
+    {
+      "event": "phase_completed",
+      "phase": 0,
+      "detail": "docs/00-idea.md üretildi (business-analyst, inline); kapı geçti (structural)"
+    }
+  ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": null
+  "updated_at": "2026-07-19T09:41:00.604Z",
+  "default_mode": "AUTOPILOT"
 }
